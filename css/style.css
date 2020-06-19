@@ -1,0 +1,25 @@
+body{
+	background-color: rgb(220,220,220,1);
+	font-family: verdana, sans-serif;
+	margin: 0;
+}
+
+.header{
+	background-image: url('../img/header.jpg');
+	background-size: cover;
+	background-position: 50%;
+	text-align: center;
+	padding: 80px 0;
+	color: white;
+}
+
+.header h1{
+	font-size: 48px;
+	text-shadow: 2px 2px 6px #000000;  
+}
+
+.header p{
+	font-size: 24px;
+	opacity: 0.7;
+	margin-bottom: 48px;
+}
