@@ -50,6 +50,10 @@ p{
 	margin: auto;
 }
 
+.ad{
+	margin: 20px 0 0 20px;
+}
+
 .footer{
 	position: fixed;
 	left: 0;
