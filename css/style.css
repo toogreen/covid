@@ -10,12 +10,12 @@ p{
 }
 
 a{
-	color: white;
+	color: red;
 	text-decoration: none;
 }
 
-a:hover{ 
-	color: white;
+a:hover{
+	color: black;
 }
 
 ol li{
@@ -63,6 +63,9 @@ ol li{
 	margin: auto;
 }
 
+#show-fr, #show-en{
+	text-align: right;
+}
 
 #en, #fr{
 	width: auto;
@@ -70,12 +73,6 @@ ol li{
 	text-justify: none;
 	margin: 10px 60px 60px 0px;
 }
-
-#en a, #fr a{
-	color: red;
-}
-
-
 
 
 .ad{
