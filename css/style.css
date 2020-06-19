@@ -4,6 +4,11 @@ body{
 	margin: 0;
 }
 
+p{
+	text-align: left;
+	margin-left: 40px;
+}
+
 .header{
 	background-image: url('../img/header-china.jpg');
 	background-size: cover;
@@ -26,14 +31,53 @@ body{
 
 .container{
 	text-align: center;
-	padding: 80px 0;
+}
+
+.grid{
+	display: grid;
+	grid-template-columns: 20% auto 20%;
+	grid-gap: 0px;
+}
+
+.page{
+	left: 10%;
+	top: 0;
+	width: 100%;
+	background-color: white;
+	text-align: center;
+	box-shadow: 10px 10px 10px rgba(0,0,0,0.2);  
+	padding: 20px;
+	margin: auto;
 }
 
 .footer{
-	position: absolute;
-	bottom: 0px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
 	width: 100%;
-	padding: 1% 0;
+	padding: 50px 0;
 	background-color: #404042;
 	color: white;
+}
+
+/* For Mobile only */
+@media only screen and (max-width: 1400px) {
+	body {
+		font-size: +1.5em;
+	}
+
+	.grid{
+		grid-template-columns: none;
+	}
+
+	.no-mobile{
+		display: none;
+	}
+
+	.page{
+		left: 0;
+		margin: auto;
+	}
+
+
 }
