@@ -9,6 +9,15 @@ p{
 	margin-left: 40px;
 }
 
+a{
+	color: white;
+	text-decoration: none;
+}
+
+a:hover{ 
+	color: white;
+}
+
 .header{
 	background-image: url('../img/header-china.jpg');
 	background-size: cover;
@@ -54,6 +63,19 @@ p{
 	margin: 20px 0 0 20px;
 }
 
+#ad-top-left{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+#ad-top-right{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+
 .footer{
 	position: fixed;
 	left: 0;
@@ -81,6 +103,14 @@ p{
 	.page{
 		left: 0;
 		margin: auto;
+	}
+
+	.ad{
+	width: 50%;
+	}
+
+	#ad-top-left, #ad-top-right{
+		display: none;
 	}
 
 
