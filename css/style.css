@@ -5,11 +5,11 @@ body{
 }
 
 .header{
-	background-image: url('../img/header.jpg');
+	background-image: url('../img/header-china.jpg');
 	background-size: cover;
 	background-position: 50%;
 	text-align: center;
-	padding: 80px 0;
+	padding: 1% 0;
 	color: white;
 }
 
@@ -33,7 +33,7 @@ body{
 	position: absolute;
 	bottom: 0px;
 	width: 100%;
-	padding: 10px 0;
+	padding: 1% 0;
 	background-color: #404042;
 	color: white;
 }
