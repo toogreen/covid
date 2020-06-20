@@ -118,7 +118,7 @@ li{
 /* For Mobile only */
 @media only screen and (max-width: 1400px) {
 	body {
-		font-size: +1.5em;
+		font-size: 1em;
 	}
 
 	.header h1{
