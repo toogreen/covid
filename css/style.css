@@ -127,7 +127,7 @@ li{
 	}
 
 	.grid{
-		grid-template-columns: none;
+		grid-template-columns: auto;
 	}
 
 	.no-mobile{
@@ -140,9 +140,6 @@ li{
 		margin: auto;
 	}
 
-	.ad{
-	width: 50%;
-	}
 
 	#ad-top-left, #ad-top-right{
 		display: none;
