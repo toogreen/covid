@@ -121,11 +121,7 @@ li{
 	body {
 		font-size: 1em;
 	}
-
-	.header, .footer{
-		position: fixed;
-	}
-
+	
 	.header h1{
 		font-size: 64px;
 	}
