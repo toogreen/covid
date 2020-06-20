@@ -39,7 +39,7 @@ li{
 	text-align: center;
 	padding: 1% 0;
 	color: white;
-	width: 100%;
+	/*width: 100%;*/
 /*	position: fixed;*/
 }
 
@@ -67,7 +67,7 @@ li{
 .page{
 	left: 10%;
 	top: 0;
-	width: 100%;
+	/*width: 100%;*/
 	background-color: white;
 	text-align: center;
 	box-shadow: 10px 10px 10px rgba(0,0,0,0.2);  
@@ -109,7 +109,7 @@ li{
 /*	position: fixed;*/
 	left: 0;
 	bottom: 0;
-	width: 100%;
+	/*width: 100%;*/
 	padding: 50px 0;
 	background-color: #404042;
 	color: white;
