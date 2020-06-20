@@ -116,12 +116,17 @@ li{
 	color: white;
 }
 
+.footer a{
+	color: white;
+	text-decoration: underline;
+}
+
 /* For Mobile only */
 @media only screen and (max-width: 1400px) {
 	body {
 		font-size: 1em;
 	}
-	
+
 	.header h1{
 		font-size: 64px;
 	}
