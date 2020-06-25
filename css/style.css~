@@ -101,9 +101,6 @@ li{
 	right: 5px;
 }
 
-#ad-bottom{
-	margin: 20px;
-}
 
 .footer{
 /*	position: fixed;*/
