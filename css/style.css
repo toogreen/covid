@@ -62,7 +62,7 @@ header p{
 	grid-gap: 0px;
 }
 
-.page{
+article{
 	top: 0;
 	width: 100%;
 	background-color: white;
@@ -138,7 +138,7 @@ footer a{
 		display: none;
 	}
 
-	.page{
+	article{
 		width: 90%;
 		left: 0;
 		margin: auto;
