@@ -29,7 +29,7 @@ li{
 	text-justify: none;
 }
 
-.header{
+header{
 	background-color: black;
 	background-image: url('../img/header-china.jpg');
 	background-size: cover;
@@ -41,12 +41,12 @@ li{
 /*	position: fixed;*/
 }
 
-.header h1{
+header h1{
 	font-size: 48px;
 	text-shadow: 2px 2px 6px #000000;  
 }
 
-.header p{
+header p{
 	font-size: 24px;
 	opacity: 0.7;
 	margin-bottom: 48px;
@@ -105,7 +105,7 @@ li{
 	margin: 20px;
 }
 
-.footer{
+footer{
 /*	position: fixed;*/
 	left: 0;
 	bottom: 0;
@@ -115,7 +115,7 @@ li{
 	color: white;
 }
 
-.footer a{
+footer a{
 	color: white;
 	text-decoration: underline;
 }
