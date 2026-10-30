@@ -5,18 +5,36 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169940317-1"></script>
+	<meta name="google-adsense-account" content="ca-pub-5829964164858117">
+
+	<!-- Consent (Quebec Law 25): ads are non-personalised and Analytics is off until the visitor accepts -->
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
 
-	  gtag('config', 'UA-169940317-1');
+	  function loadAnalytics(){
+	    if (loadAnalytics.done) return;
+	    loadAnalytics.done = true;
+	    gtag('js', new Date());
+	    gtag('config', 'G-43C3ZK22HX');
+	    var s = document.createElement('script');
+	    s.async = true;
+	    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-43C3ZK22HX';
+	    document.head.appendChild(s);
+	  }
+
+	  (function(){
+	    var granted = false;
+	    try { granted = localStorage.getItem('covid-consent') === 'granted'; } catch(e) {}
+	    var state = granted ? 'granted' : 'denied';
+	    gtag('consent', 'default', {ad_storage: state, ad_user_data: state, ad_personalization: state, analytics_storage: state});
+	    if (granted) loadAnalytics();
+	    else (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
+	  })();
 	</script>
 
 	<!-- AdSense -->
-	<script data-ad-client="ca-pub-7401520800104068" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5829964164858117" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -155,8 +173,22 @@
 	<footer>
 		<div class="container">
 			Design and Code by <a href="http://www.toogreen.ca" target="_blank">toogreen</a> &copy;2020
+			<p class="legal">
+				<a href="privacy.html">Privacy policy / Politique de confidentialité</a> &bull;
+				<button type="button" id="cookie-settings">Cookie settings / Paramètres des témoins</button>
+			</p>
 		</div>
 	</footer>
+
+	<!-- Cookie consent banner -->
+	<div id="consent" role="dialog" aria-live="polite" aria-labelledby="consent-msg" style="display: none;">
+		<p id="consent-msg" lang="fr">Ce site est gratuit grâce à la publicité. Avec votre accord, Google peut utiliser des témoins (cookies) pour vous montrer des annonces personnalisées et pour mesurer les visites avec Google Analytics. Si vous refusez, vous verrez quand même des annonces, mais non personnalisées, et votre visite ne sera pas mesurée. <a href="privacy.html#fr">En savoir plus</a></p>
+		<p lang="en">This site is free thanks to advertising. With your permission, Google may use cookies to show you personalised ads and to measure visits with Google Analytics. If you refuse, you will still see ads, but they won't be personalised and your visit won't be measured. <a href="privacy.html#en">Learn more</a></p>
+		<div class="consent-btns">
+			<button type="button" id="consent-refuse">Refuser / Refuse</button>
+			<button type="button" id="consent-accept">Accepter / Accept</button>
+		</div>
+	</div>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -165,6 +197,24 @@
 
 
 $(document).ready(function(){
+
+// Cookie consent banner (Quebec Law 25)
+var hasChoice = false;
+try { hasChoice = !!localStorage.getItem('covid-consent'); } catch(e) {}
+if (!hasChoice) $('#consent').show();
+
+function setConsent(granted){
+	var state = granted ? 'granted' : 'denied';
+	try { localStorage.setItem('covid-consent', state); } catch(e) {}
+	gtag('consent', 'update', {ad_storage: state, ad_user_data: state, ad_personalization: state, analytics_storage: state});
+	if (granted) loadAnalytics();
+	(window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = granted ? 0 : 1;
+	$('#consent').hide();
+}
+
+$('#consent-accept').click(function(){ setConsent(true); });
+$('#consent-refuse').click(function(){ setConsent(false); });
+$('#cookie-settings').click(function(){ $('#consent').show(); });
 
 // Get all the strings from URL
 var vars = [], hash;

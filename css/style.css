@@ -120,6 +120,64 @@ footer a{
 	text-decoration: underline;
 }
 
+.legal{
+	font-size: 13px;
+}
+
+.legal button{
+	background: none;
+	border: 0;
+	color: white;
+	cursor: pointer;
+	font: inherit;
+	padding: 0;
+	text-decoration: underline;
+}
+
+#consent{
+	position: fixed;
+	bottom: 12px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100vw - 24px);
+	max-width: 560px;
+	box-sizing: border-box;
+	padding: 14px 16px;
+	background: white;
+	color: black;
+	border: 2px solid black;
+	border-radius: 6px;
+	box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+	font-size: 14px;
+	line-height: 1.4;
+	text-align: left;
+	z-index: 100000;
+}
+
+#consent p{
+	margin: 0 0 12px;
+}
+
+#consent a{
+	text-decoration: underline;
+}
+
+.consent-btns{
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+}
+
+.consent-btns button{
+	padding: 8px 18px;
+	font: inherit;
+	border: 2px solid black;
+	border-radius: 4px;
+	background: white;
+	color: black;
+	cursor: pointer;
+}
+
 /* For Mobile only */
 @media only screen and (max-width: 1400px) {
 	body {
